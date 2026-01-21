@@ -3,17 +3,19 @@ import PostList from "./PostList";
 import { css } from "../../styled-system/css";
 
 const gridStyle = css({
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-  gap: "2rem",
-  marginTop: "2rem",
+  display: "flex",
+  flexDirection: "column",
+  gap: "10px",
+  marginTop: "-15px",
 });
 
 const cardStyle = css({
   background: "white",
-  border: "1px solid #d2d2d7",
-  borderRadius: "12px",
-  padding: "2rem",
+  borderBottom: "1px solid #d2d2d7",
+  // borderRadius: "5px",
+  padding: "15px",
+  paddingLeft: "0"
+
 });
 
 const title = css({
@@ -21,8 +23,17 @@ const title = css({
   fontSize: "42px",
   margin: 0,
   marginBottom: "10px",
+  filter: " invert(1)",
+  background: "white",
+  padding: "20px",
   fontWeight: "900",
+  borderRadius: "5px"
 });
+
+const cardTitle = css({
+  margin: 0
+});
+
 
 function HomePage() {
   return (
@@ -38,15 +49,15 @@ function HomePage() {
       <h2>Benefits</h2>
       <div className={gridStyle}>
         <div className={cardStyle}>
-          <h3>Minimal learning curve</h3>
+          <h3 className={cardTitle} >Minimal learning curve</h3>
           <p>You only require knowledge of react & express</p>
         </div>
         <div className={cardStyle}>
-          <h3>Minimal need to change frontend code</h3>
+          <h3 className={cardTitle}>Minimal need to change frontend code</h3>
           <p>Frontend is a standard react app</p>
         </div>
         <div className={cardStyle}>
-          <h3>Works with any frontend technology</h3>
+          <h3 className={cardTitle}>Works with any frontend technology</h3>
           <p>
             You can replace the frontend folder with any other technology and it
             will still work

@@ -71,7 +71,7 @@ export default defineConfig({
       letterSpacing: "-0.022em",
     },
     "p.subtitle": {
-      fontSize: "1.5rem",
+      fontSize: "1.2rem",
       lineHeight: "1.3",
       color: "#86868b",
       maxWidth: "80%",
