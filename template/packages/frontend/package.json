@@ -6,7 +6,6 @@
     "scripts": {
         "dev": "vite",
         "start": "node index.js",
-        "prerender": "node prerender.js",
         "prepare": "panda codegen",
         "build": "vite build",
         "preview": "vite preview"

@@ -103,6 +103,11 @@ public/
 # TurboRepo
 .turbo
 .turbo/
+
+dist/
+
+template/packages/frontend/dist/
+
 template/.turbo/
 ## Panda
 styled-system
