@@ -6,7 +6,7 @@ const gridStyle = css({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
   gap: "2rem",
-  marginTop: "2rem"
+  marginTop: "2rem",
 });
 
 const cardStyle = css({
@@ -21,15 +21,15 @@ const title = css({
   fontSize: "42px",
   margin: 0,
   marginBottom: "10px",
-  fontWeight: "900"
+  fontWeight: "900",
 });
 
 function HomePage() {
   return (
     <div>
       <header>
-        <h1 className={title} >create-simple-fullstack-project</h1>
-        <p >
+        <h1 className={title}>create-simple-fullstack-project</h1>
+        <p>
           One of the most minimal way to create fullstack project that supports
           SSR, SSG & Sitemap Generation out of the box
         </p>
@@ -60,11 +60,6 @@ function HomePage() {
       <br />
       <br />
       <br />
-      <Link to="/post/1">Open Post 1</Link>
-      <br />
-      <a target="_blank" href="/post/1">
-        Open Post 1 (New Tab)
-      </a>
     </div>
   );
 }
