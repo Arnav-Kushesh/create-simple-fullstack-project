@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 
 function PostItem({ title, body, isLoading }) {
   return (
-    <section>
+    <section className="retro-container">
       {isLoading ? (
         <div className="loading">Loading amazing content...</div>
       ) : (
-        <>
+        <div className="retro-card">
           <h2>{title}</h2>
-          <p className="subtitle">{body}</p>
-        </>
+          <p>{body}</p>
+        </div>
       )}
     </section>
   );

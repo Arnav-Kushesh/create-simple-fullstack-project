@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function PostList() {
   const [posts, setPosts] = useState([]);
@@ -53,6 +54,19 @@ function PostList() {
             <div key={post.id} className="card">
               <h3>{post.title.substring(0, 30)}...</h3>
               <p>{post.body.substring(0, 100)}...</p>
+              <div className="button-group">
+                <a
+                  href={`/post/${post.id}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-secondary"
+                >
+                  Open in new tab (See SSR in action)
+                </a>
+                <Link to={`/post/${post.id}`} className="btn">
+                  Open (CSR is used)
+                </Link>
+              </div>
             </div>
           ))}
         </div>

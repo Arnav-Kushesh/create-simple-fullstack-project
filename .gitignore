@@ -104,3 +104,6 @@ public/
 .turbo
 .turbo/
 template/.turbo/
+## Panda
+styled-system
+styled-system-studio
