@@ -14,8 +14,7 @@ const cardStyle = css({
   borderBottom: "1px solid #d2d2d7",
   // borderRadius: "5px",
   padding: "15px",
-  paddingLeft: "0"
-
+  paddingLeft: "0",
 });
 
 const title = css({
@@ -27,19 +26,18 @@ const title = css({
   background: "white",
   padding: "20px",
   fontWeight: "900",
-  borderRadius: "5px"
+  borderRadius: "5px",
 });
 
 const cardTitle = css({
-  margin: 0
+  margin: 0,
 });
-
 
 function HomePage() {
   return (
     <div>
       <header>
-        <h1 className={title}>create-simple-fullstack-project</h1>
+        <h1 className={title}>start-simple</h1>
         <p>
           One of the most minimal way to create fullstack project that supports
           SSR, SSG & Sitemap Generation out of the box
@@ -49,7 +47,7 @@ function HomePage() {
       <h2>Benefits</h2>
       <div className={gridStyle}>
         <div className={cardStyle}>
-          <h3 className={cardTitle} >Minimal learning curve</h3>
+          <h3 className={cardTitle}>Minimal learning curve</h3>
           <p>You only require knowledge of react & express</p>
         </div>
         <div className={cardStyle}>

@@ -1,5 +1,5 @@
 {
-  "name": "create-simple-fullstack-project-template",
+  "name": "start-simple-template",
   "private": true,
   "workspaces": [
     "packages/*"

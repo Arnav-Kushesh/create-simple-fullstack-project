@@ -77,7 +77,7 @@ function PostList() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  let data = posts;
+  let data = [...posts];
   let isLoading = loading;
   let dataAlreadyLoaded = false;
 
@@ -86,12 +86,14 @@ function PostList() {
     : null;
 
   if (preLoadedData) {
-    data = preLoadedData;
+    data = [...preLoadedData];
     isLoading = false;
     dataAlreadyLoaded = true;
   }
 
   window.EXPORT_STATIC_PAGE_DATA = data;
+
+  console.log("rendering home", { dataAlreadyLoaded, data, isLoading });
 
   useEffect(() => {
     if (!dataAlreadyLoaded) {
@@ -107,6 +109,8 @@ function PostList() {
         });
     }
   }, [dataAlreadyLoaded]);
+
+  // return `hello ${data.length}`;
 
   return (
     <section>
@@ -128,10 +132,10 @@ function PostList() {
         <div className={gridStyle}>
           {data.map((post) => (
             <div key={post.id} className={cardStyle}>
-              <h3>{post.title.substring(0, 30)}...</h3>
-              <p>{post.body.substring(0, 100)}...</p>
+              <h3>{post.title.substring(0, 30) + "..."}</h3>
+              <p>{post.body.substring(0, 100) + "..."}</p>
               <div className={buttonGroupStyle}>
-                <a
+                {/* <a
                   href={`/post/${post.id}`}
                   target="_blank"
                   rel="noreferrer"
@@ -141,7 +145,7 @@ function PostList() {
                 </a>
                 <Link to={`/post/${post.id}`} className={primaryBtnStyle}>
                   Open
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}

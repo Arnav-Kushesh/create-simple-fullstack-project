@@ -1,6 +1,6 @@
-## Create Simple Fullstack Project
+## Start Simple
 
-One of the most minimal way to create fullstack project that supports SSR, SSG & Sitemap Generation out of the box
+A minimal way to create fullstack project that supports SSR, SSG & Sitemap Generation out of the box
 
 ## Why this project was created
 
@@ -73,7 +73,7 @@ We wanted to create a way to add SSR & SSG features with minimal code changes on
 
 ## Installation
 
-`npx create-simple-fullstack-project`
+`npx start-simple`
 
 ## How to run dev server
 

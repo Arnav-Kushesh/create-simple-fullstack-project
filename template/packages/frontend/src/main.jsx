@@ -1,13 +1,27 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+let container = document.getElementById("root");
+
+let Component = (
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+Component = (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
+if (container.innerHTML.trim()) {
+  hydrateRoot(container, Component);
+} else {
+  createRoot(container).render(Component);
+}

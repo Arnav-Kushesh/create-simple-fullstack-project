@@ -56,7 +56,7 @@ export default async function simpleSiteOptimizer(config) {
   });
 
   const templateRoutesSet = new Set(
-    dynamicRoutes.map((route) => removeTrailingSlash(route.templateRoute))
+    dynamicRoutes.map((route) => removeTrailingSlash(route.templateRoute)),
   );
 
   // 4. Main Server
@@ -70,9 +70,9 @@ export default async function simpleSiteOptimizer(config) {
     // Check for sitemap request
     if (reqPathRaw.startsWith("/sitemap")) {
       const handled = await handleSitemapRequest(req, res, config);
-      if (handled !== undefined) return; // If handleSitemapRequest sent a response, it might return a promise resolving to nothing or response object. 
-      // My implementation returns res.send(...) which returns the response object usually. 
-      // If it returns explicit false/null, we continue. 
+      if (handled !== undefined) return; // If handleSitemapRequest sent a response, it might return a promise resolving to nothing or response object.
+      // My implementation returns res.send(...) which returns the response object usually.
+      // If it returns explicit false/null, we continue.
       // But looking at my code, I return the result of res.send().
       // Wait, if it falls through (e.g. 404 inside logic or not matching regex), it might return 404.
       // Actually my implementation sends 404 explicitly if not found but matched prefix pattern logic.
@@ -113,8 +113,8 @@ export default async function simpleSiteOptimizer(config) {
           </script>`;
 
         let finalHtml = html;
-        if (finalHtml.includes("</body>")) {
-          finalHtml = finalHtml.replace("</body>", `${injection}</body>`);
+        if (finalHtml.includes("<head>")) {
+          finalHtml = finalHtml.replace("<head>", `<head>${injection}`);
         } else {
           finalHtml += injection;
         }
@@ -186,8 +186,8 @@ export default async function simpleSiteOptimizer(config) {
           </script>`;
 
           const finalHtml = renderedHtml.replace(
-            "</body>",
-            `${injection}</body>`,
+            "<head>",
+            `</head>${injection}`,
           );
 
           return res.send(finalHtml);

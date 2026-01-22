@@ -1,17 +1,17 @@
 {
-  "name": "create-simple-fullstack-project",
+  "name": "start-simple",
   "version": "1.0.8",
   "description": "A minimal way to create fullstack project that supports SSR, SSG, Sitemap Generation out of the box",
   "bin": {
-    "create-simple-fullstack-project": "./index.js"
+    "start-simple": "./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arnav-kushesh/create-simple-fullstack-project.git"
+    "url": "https://github.com/arnav-kushesh/start-simple.git"
   },
-  "homepage": "https://github.com/arnav-kushesh/create-simple-fullstack-project",
+  "homepage": "https://github.com/arnav-kushesh/start-simple",
   "bugs": {
-    "url": "https://github.com/arnav-kushesh/create-simple-fullstack-project/issues"
+    "url": "https://github.com/arnav-kushesh/start-simple/issues"
   },
   "keywords": [
     "react",
