@@ -1,7 +1,7 @@
 {
   "name": "start-simple",
-  "version": "1.0.12",
-  "description": "A minimal way to create fullstack project that supports SSR, SSG, Sitemap Generation out of the box",
+  "version": "1.0.13",
+  "description": "A minimal full-stack setup with out-of-the-box support for SSR, SSG, and sitemap generation.",
   "bin": {
     "start-simple": "./index.js"
   },

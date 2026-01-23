@@ -11,7 +11,7 @@
 
 ## What is "Start Simple"
 
-A minimal way to create fullstack project that supports SSR, SSG & sitemap generation out of the box
+A minimal full-stack setup with out-of-the-box support for SSR, SSG, and sitemap generation.
 
 ## Why this project was created
 
@@ -190,7 +190,7 @@ if (container.innerHTML.trim()) {
 
 - If anchor tag with target="\_black" is used then ensure that it has the following attribute rel="noopener noreferrer"
 - If rel="noopener noreferrer" is not there then Puppeteer might add it for security reasons which can cause hydration issues
-- This is a theoretical issue, in practice this issue has not occurred in our testing
+- This is a theoretical issue, in practice this issue has not occurred
 
 # How to use sitemap generator
 

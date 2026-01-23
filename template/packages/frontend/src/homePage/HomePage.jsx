@@ -37,10 +37,10 @@ function HomePage() {
   return (
     <div>
       <header>
-        <h1 className={title}>start-simple-JS</h1>
+        <h1 className={title}>start-simple-js</h1>
         <p>
-          One of the most minimal way to create fullstack project that supports
-          SSR, SSG & Sitemap Generation out of the box
+          A minimal full-stack setup with out-of-the-box support for SSR, SSG,
+          and sitemap generation.
         </p>
       </header>
 
