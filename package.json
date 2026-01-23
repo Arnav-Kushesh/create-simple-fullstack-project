@@ -1,6 +1,6 @@
 {
   "name": "start-simple",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A minimal full-stack setup with out-of-the-box support for SSR, SSG, and sitemap generation.",
   "bin": {
     "start-simple": "./index.js"

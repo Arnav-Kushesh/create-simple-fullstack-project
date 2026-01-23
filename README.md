@@ -1,5 +1,5 @@
 <div align="center">
-
+<br/><br/>
 <img alt="start-simple-logo" src="https://raw.githubusercontent.com/arnav-kushesh/start-simple/master/assets/pot.png" height="128"/>
 <h3 style="margin-top: 9px;">StartSimple.js</h3>
 
