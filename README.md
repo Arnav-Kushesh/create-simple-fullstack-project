@@ -67,6 +67,12 @@ We wanted to create a way to add SSR & SSG features with minimal code changes on
 let preLoadedData = window.getPreLoadedData && window.getPreLoadedData();
 ```
 
+### Limitations
+
+- For now we would recommend that SSR is done with BOT_ONLY mode
+- because the page can be complex and syncing template with react component might not be possible
+- We recommend that you write a template route that returns handlebar template, this does not need to be inside with the dynamic route as it will only be served to the bots
+
 ### Use Cases
 
 ### Add SSR to a capacitor project
