@@ -149,16 +149,15 @@ export default config;
 
 ## Development
 
-`npm run dev` Starts the backend, frontend server using TurboRepo - SSR & SSG is disabled in this case
-`npm run build` Builds the project and does the pre-rendering
-`npm run optimized-frontend` Frontend is started with SSR & SSG
+- `npm run dev` Starts the backend & frontend server using TurboRepo - SSR & SSG is disabled in this case
+- `npm run build` Builds the frontend and does the pre-rendering
+- `npm run optimized-frontend` Frontend is started with SSR & SSG
 
 ## How to do deployment
 
-`npm run backend` - For backend deployment
-`npm run build` - For generating dist folder & doing pre-rendering
-`npm run optimized-frontend` - For frontend deployment that supports SSG & SSR
-
+- `npm run backend` - For backend deployment
+- `npm run build` - For generating dist folder & doing pre-rendering
+- `npm run optimized-frontend` - For frontend deployment that supports SSG & SSR
 - Before running `npm run optimized-frontend` you first need to run the build command so that pre-rendering can happen
 
 ## If you end up replacing the frontend folder do remember to enable hydration using the following code if you are using react
@@ -189,11 +188,11 @@ if (container.innerHTML.trim()) {
 
 # How to use sitemap generator
 
-To enable sitemap generation, you need to update your `config.js` file inside of optimized-frontend
+To enable sitemap generation, you need to update your `config.js` file inside of `optimized-frontend` folder
 
 ### 1. Add Domain
 
-Add the `domain` property to your exported config object. This is used to construct absolute URLs in the sitemap.
+Add the `domain` property to config object. This is used to construct absolute URLs in the sitemap.
 
 ```js
 let config = {
@@ -210,7 +209,7 @@ The `sitemapGenerator` function should return an object with:
 
 - `uniqueName`: A unique string identifier for this route (e.g., "posts", "products").
 - `total`: The total number of items available for this route.
-- `loader`: A function that fetches the data for a specific page of the sitemap.
+- `loader`: A function that fetches list of urls for sitemap
 
 #### Loader Function
 
@@ -259,7 +258,7 @@ const dynamicRoutes = [
 ];
 ```
 
-## How it Works
+## Structure of the generated sitemap
 
 Once configured, the following endpoints will be available:
 
