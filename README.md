@@ -73,6 +73,7 @@ let preLoadedData = window.getPreLoadedData && window.getPreLoadedData();
 - because syncing template with react component might not be possible for complex pages
 - We recommend that you write a template route that returns handlebar template, this does not need to be inline with the dynamic route as it will only be served to the bots
 - Also, this is an evolving tool which is in very early stages.
+- Limitations only exists for SSR. In case of SSG, there aren't such limitations.
 
 ### Use Cases
 
